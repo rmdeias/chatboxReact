@@ -6,6 +6,7 @@ class Connexion extends Component {
         pseudo: '',
         goToChat: false
     }
+    
     handleChange = (event) =>{
         const pseudo=event.target.value
         this.setState({pseudo})
@@ -24,11 +25,13 @@ render() {
      return (
             <div className='connexionBox'>
                 <form className='connexion' onSubmit ={this.handleSubmit}>
+
                     <input 
                     onChange={this.handleChange}
                     placeholder='Pseudo'
                     type='text'
                     value ={this.state.pseudo}/>
+                    
                     <button>Valider</button>
                 </form>
                 
