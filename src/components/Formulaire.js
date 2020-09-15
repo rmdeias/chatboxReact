@@ -4,12 +4,14 @@ export default class Formulaire extends Component {
     
     state ={
         message:'',
-        length: this.props.length
+        length: this.props.length,
+        pseudo: this.props.pseudo,
+        addMessage: this.props.addMessage
     }
     
     createMessage = ()=>{
-        const{addMessage,pseudo, length} = this.props
-
+        const {length, pseudo,addMessage} = this.state
+        
         const message ={
             pseudo,
             message: this.state.message
@@ -36,7 +38,7 @@ export default class Formulaire extends Component {
                 <textarea onChange={this.handleChange}
                 required
                 value ={this.state.message}
-                maxLength= '150'/>
+                maxLength= {this.props.length}/>
 
                 <div className='info'>
                     {this.state.length}

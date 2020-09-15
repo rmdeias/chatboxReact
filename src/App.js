@@ -26,7 +26,7 @@ export default class App extends Component {
         </div>
       </div>
       <Formulaire pseudo={this.state.pseudo}
-      addMessage ={this.addMessage} length = {'150'}/>
+      addMessage ={this.addMessage} length = {150}/>
      </div>
     )
   }
